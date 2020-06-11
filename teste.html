@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var quebrado = false;
+        function acende(){
+            if(quebrado == false){
+                document.querySelector('img#lampada').src = "_imagens/lampada-acesa.jpg";
+            }
+        }
+
+        function apaga(){
+            if(quebrado == false){
+                document.querySelector('img#lampada').src = "_imagens/lampada-apagada.jpg";
+            }
+        }
+
+        function quebra(){
+            document.querySelector('img#lampada').src = "_imagens/lampada-quebrada.jpg";
+            quebrado = true;
+        }
+    </script>
+</head>
+<body>
+    <h1>Acenda a lampada</h1>
+    <img id="lampada" src="_imagens/lampada-apagada.jpg" alt="" onmousemove="acende()" onmouseout="apaga()" onclick="quebra()">
+</body>
+</html>
